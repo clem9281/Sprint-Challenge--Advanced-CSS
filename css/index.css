@@ -190,7 +190,8 @@ footer {
   align-items: center;
 }
 .home section,
-.home header {
+.home header,
+.home footer {
   position: relative;
   top: 100px;
 }
