@@ -193,7 +193,7 @@ footer {
   }
 }
 .home header img {
-  max-width: 100%;
+  width: 100%;
   border-radius: 10px;
 }
 .home .intro h2 {
@@ -264,10 +264,11 @@ footer {
   margin-bottom: 26px;
 }
 .home .walk .walk-text .btn {
+  border: 1px solid #22283a;
   background: #22283a;
   color: white;
   cursor: pointer;
-  border: 1px solid #22283a;
+  transition: transform 0.3s, box-shadow 0.3s;
   font-size: 2rem;
   border-radius: 5px;
   text-align: center;
@@ -277,6 +278,8 @@ footer {
   background: white;
   color: #22283a;
   border: 1px solid #22283a;
+  transform: scale(1.05);
+  box-shadow: 5px 5px 10px #22283a;
 }
 @media (max-width: 500px) {
   .home .walk .walk-text .btn {
@@ -290,7 +293,7 @@ footer {
 }
 @media (max-width: 500px) {
   .home .walk .walk-img {
-    margin: 0 0 0;
+    margin: 0;
     width: 100%;
     order: -1;
   }
