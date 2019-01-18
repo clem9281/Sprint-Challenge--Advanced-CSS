@@ -36,9 +36,8 @@
       }
       &:first-child {
         @media @phone {
-          display: block;
-          margin: 20px auto;
-          width: 90%;
+          .center-image(20px, 20px);
+          width: 95%;
         }
       }
     }
@@ -62,10 +61,18 @@
     padding: 50px 60px;
     display: flex;
     justify-content: center;
+    @media @phone {
+      margin-top: 30px;
+      padding: 0;
+      flex-wrap: wrap;
+    }
 
     .walk-text {
       width: 50%;
-
+      @media @phone {
+        padding: 15px;
+        width: 100%;
+      }
       h3 {
         margin-bottom: 10px;
       }
@@ -81,17 +88,29 @@
         border-radius: 5px;
         text-align: center;
         padding: 5px 15px;
+        @media @phone {
+          width: 100%;
+          padding: 22px 0;
+        }
       }
     }
 
     .walk-img {
       width: 46%;
       margin-left: 4%;
-
+      @media @phone {
+        margin: 0 0 0;
+        width: 100%;
+        order: -1;
+      }
       img {
         width: 100%;
         height: auto;
         border-radius: 10px;
+        @media @phone {
+          width: 95%;
+          .center-image(10px, 10px);
+        }
       }
     }
   }
