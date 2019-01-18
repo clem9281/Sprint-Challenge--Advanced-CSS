@@ -2,7 +2,12 @@
 
 .home {
   header {
+    @media @phone {
+      width: 100%;
+      max-width: 500px;
+    }
     img {
+      max-width: 100%;
       border-radius: 10px;
     }
   }
@@ -21,12 +26,21 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-
     img {
       width: 28%;
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+      @media @phone {
+        display: none;
+      }
+      &:first-child {
+        @media @phone {
+          display: block;
+          margin: 20px auto;
+          width: 90%;
+        }
+      }
     }
   }
 
@@ -58,15 +72,15 @@
 
       p {
         margin-bottom: 26px;
+        //custom button
       }
-
       .btn {
-        .custom-button(@btn-bg-color, white, none);
+        .custom-button(@btn-bg-color, white);
+        border: 1px solid @btn-bg-color;
         font-size: 2rem;
         border-radius: 5px;
         text-align: center;
         padding: 5px 15px;
-        cursor: pointer;
       }
     }
 
@@ -81,4 +95,4 @@
       }
     }
   }
-} // home
+}

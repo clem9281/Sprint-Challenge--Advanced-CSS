@@ -1,9 +1,14 @@
 // Mixins Here
 
-.custom-button(@bg-color, @font-color, @border) {
+.custom-button(@bg-color, @font-color) {
   background: @bg-color;
   color: @font-color;
-  border: @border;
+  cursor: pointer;
+  &:hover {
+    background: @font-color;
+    color: @bg-color;
+    border: 1px solid @bg-color;
+  }
 }
 
 .custom-font(@size, @margin, @font-color) {
