@@ -186,6 +186,22 @@ footer {
   justify-content: center;
   align-items: center;
 }
+@keyframes from-right {
+  from {
+    left: 200%;
+  }
+  to {
+    left: 0;
+  }
+}
+@keyframes from-left {
+  from {
+    left: -200%;
+  }
+  to {
+    left: 0;
+  }
+}
 @media (max-width: 500px) {
   .home header {
     width: 100%;
@@ -193,8 +209,32 @@ footer {
   }
 }
 .home header img {
+  position: relative;
   width: 100%;
   border-radius: 10px;
+  animation-name: from-top;
+  animation-duration: 2s;
+  animation-delay: 0s;
+}
+@keyframes from-top {
+  from {
+    top: -200px;
+  }
+  to {
+    top: 0;
+  }
+}
+.home header h2 {
+  position: relative;
+  animation-name: from-right;
+  animation-duration: 2s;
+  animation-delay: 0s;
+}
+.home header p {
+  position: relative;
+  animation-name: from-left;
+  animation-duration: 2s;
+  animation-delay: 0s;
 }
 .home .intro h2 {
   padding: 15px;
@@ -208,6 +248,7 @@ footer {
   width: 100%;
 }
 .home .space-images img {
+  position: relative;
   width: 28%;
   margin: 20px 2.5%;
   border-radius: 20px;
@@ -218,6 +259,11 @@ footer {
     display: none;
   }
 }
+.home .space-images img:first-child {
+  animation-name: from-left;
+  animation-duration: 2s;
+  animation-delay: 0s;
+}
 @media (max-width: 500px) {
   .home .space-images img:first-child {
     display: block;
@@ -225,14 +271,40 @@ footer {
     width: 95%;
   }
 }
+.home .space-images img:nth-child(2) {
+  animation-name: fade-in;
+  animation-duration: 2s;
+  animation-delay: 0s;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.home .space-images img:last-child {
+  animation-name: from-right;
+  animation-duration: 2s;
+  animation-delay: 0;
+}
 .home .visit-planets {
   padding: 15px;
 }
 .home .visit-planets h3 {
   margin-top: 11px;
+  position: relative;
+  animation-name: from-left;
+  animation-duration: 2s;
+  animation-delay: 1s;
 }
 .home .visit-planets p {
   margin-top: 13px;
+  position: relative;
+  animation-name: from-right;
+  animation-duration: 2s;
+  animation-delay: 1s;
 }
 .home .walk {
   margin-top: 60px;
@@ -240,6 +312,18 @@ footer {
   padding: 50px 60px;
   display: flex;
   justify-content: center;
+  position: relative;
+  animation-name: from-bottom;
+  animation-duration: 2s;
+  animation-delay: 1s;
+}
+@keyframes from-bottom {
+  from {
+    top: 200px;
+  }
+  to {
+    top: 0;
+  }
 }
 @media (max-width: 500px) {
   .home .walk {

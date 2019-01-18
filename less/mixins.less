@@ -33,3 +33,43 @@
   display: block;
   margin: @marginTop auto @marginBottom;
 }
+
+// animations
+.animate(@name, @duration, @delay) {
+  animation-name: @name;
+  animation-duration: @duration;
+  animation-delay: @delay;
+}
+
+.slide-in-horizontal(@name, @from, @to) {
+  @keyframes @name {
+    from {
+      left: @from;
+    }
+    to {
+      left: @to;
+    }
+  }
+}
+
+.appear(@name, @from, @to) {
+  @keyframes @name {
+    from {
+      opacity: @from;
+    }
+    to {
+      opacity: @to;
+    }
+  }
+}
+
+.slide-in-vertical(@name, @from, @to) {
+  @keyframes @name {
+    from {
+      top: @from;
+    }
+    to {
+      top: @to;
+    }
+  }
+}
