@@ -328,7 +328,7 @@ footer {
 }
 @keyframes from-bottom {
   from {
-    top: 200px;
+    top: 400px;
   }
   to {
     top: 0;
