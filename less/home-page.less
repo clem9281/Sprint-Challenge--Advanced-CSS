@@ -10,17 +10,20 @@
       max-width: 500px;
     }
     img {
-      position: relative;
       width: 100%;
       border-radius: 10px;
+      // header image slides in from top
+      position: relative;
       .animate(from-top, 2s, 0s);
       .slide-in-vertical(from-top, -200px, 0);
     }
     h2 {
+      // text header slides in from right
       position: relative;
       .animate(from-right, 2s, 0s);
     }
     p {
+      // paragraph text slides in from left
       position: relative;
       .animate (from-left, 2s, 0s);
     }
@@ -41,6 +44,7 @@
     flex-wrap: wrap;
     width: 100%;
     img {
+      // position relative for animations
       position: relative;
       width: 28%;
       margin: 20px 2.5%;
@@ -50,19 +54,23 @@
       @media @phone {
         display: none;
       }
+      // first image slides in from left
       &:first-child {
         .animate(from-left, 2s, 0s);
+        // on mobile increase image width and center
         @media @phone {
           .center-image(20px, 20px);
           width: 95%;
         }
       }
+      // second image fades in
       &:nth-child(2) {
         .animate (fade-in, 2s, 0s);
         .appear(fade-in, 0, 1);
       }
+      // third image slides in from right
       &:last-child {
-        .animate(from-right, 2s, 0);
+        .animate(from-right, 2s, 0s);
       }
     }
   }
@@ -72,12 +80,14 @@
 
     h3 {
       margin-top: 11px;
+      // text header slides in from left
       position: relative;
       .animate(from-left, 2s, 1s);
     }
 
     p {
       margin-top: 13px;
+      // paragraph slides in from right
       position: relative;
       .animate(from-right, 2s, 1s);
     }
@@ -89,6 +99,7 @@
     padding: 50px 60px;
     display: flex;
     justify-content: center;
+    // whole section slides in from bottom
     position: relative;
     .animate(from-bottom, 2s, 1s);
     .slide-in-vertical(from-bottom, 200px, 0);

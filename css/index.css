@@ -209,9 +209,9 @@ footer {
   }
 }
 .home header img {
-  position: relative;
   width: 100%;
   border-radius: 10px;
+  position: relative;
   animation-name: from-top;
   animation-duration: 2s;
   animation-delay: 0s;
@@ -287,7 +287,7 @@ footer {
 .home .space-images img:last-child {
   animation-name: from-right;
   animation-duration: 2s;
-  animation-delay: 0;
+  animation-delay: 0s;
 }
 .home .visit-planets {
   padding: 15px;
