@@ -1,8 +1,13 @@
 // Navigation code here
 nav {
   text-align: center;
-  margin-bottom: 10px;
-  background: @nav-bg;
+  // used less function to alter alpha opacity of nav
+  background: fade(@nav-bg, 70%);
+  // added fixed nav
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  z-index: 999;
   h1 {
     .custom-font(4rem, 20px 0, black);
   }
