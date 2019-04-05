@@ -1,1 +1,75 @@
 // Mixins Here
+
+// custom button with hover animation
+.custom-button(@bg-color, @font-color) {
+  border: 1px solid @bg-color;
+  background: @bg-color;
+  color: @font-color;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  &:hover {
+    background: @font-color;
+    color: @bg-color;
+    border: 1px solid @bg-color;
+    transform: scale(1.05);
+    box-shadow: 5px 5px 10px @bg-color;
+  }
+}
+
+// change font size and color
+.custom-font(@size, @margin, @font-color) {
+  font-size: @size;
+  margin: @margin;
+  color: @font-color;
+}
+
+// the links have no text-decoration
+.custom-links() {
+  text-decoration: none;
+}
+
+// center image for mobile, adjustable top and bottom margin
+.center-image(@marginTop, @marginBottom) {
+  display: block;
+  margin: @marginTop auto @marginBottom;
+}
+
+// animations
+.animate(@name, @duration, @delay) {
+  animation-name: @name;
+  animation-duration: @duration;
+  animation-delay: @delay;
+}
+
+.slide-in-horizontal(@name, @from, @to) {
+  @keyframes @name {
+    from {
+      left: @from;
+    }
+    to {
+      left: @to;
+    }
+  }
+}
+
+.appear(@name, @from, @to) {
+  @keyframes @name {
+    from {
+      opacity: @from;
+    }
+    to {
+      opacity: @to;
+    }
+  }
+}
+
+.slide-in-vertical(@name, @from, @to) {
+  @keyframes @name {
+    from {
+      top: @from;
+    }
+    to {
+      top: @to;
+    }
+  }
+}
